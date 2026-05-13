@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  background-color: #1e1e2e;
+}
+
+.app-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  color: #cdd6f4;
+  font-family: "Fira Code", monospace, sans-serif;
+  min-height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.add-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.add-form input {
+  flex-grow: 1;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: none;
+  background: #313244;
+  color: #cdd6f4;
+  font-size: 16px;
+  outline: none;
+  transition: outline 0.2s;
+}
+
+.add-form input:focus {
+  outline: 2px solid #89b4fa;
+}
+
+.add-btn {
+  padding: 12px 25px;
+  border-radius: 8px;
+  border: none;
+  background: #89b4fa;
+  color: #1e1e2e;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+  transition:
+    opacity 0.2s,
+    transform 0.1s;
+}
+
+.add-btn:hover {
+  opacity: 0.85;
+}
+
+.add-btn:active {
+  transform: scale(0.95);
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  background: #313244;
+  border-radius: 8px;
+  transition:
+    transform 0.2s,
+    opacity 0.2s;
+}
+
+.task:hover {
+  transform: translateX(5px);
+}
+
+.task.pending {
+  border-left: 4px solid #f38ba8;
+}
+
+.task.done {
+  border-left: 4px solid #a6e3a1;
+  opacity: 0.6;
+}
+
+.task.done p {
+  text-decoration: line-through;
+  color: #a6adc8;
+}
+
+.delete {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  transition: transform 0.2s;
+}
+
+.delete:hover {
+  transform: scale(1.3);
+}
